@@ -15,16 +15,15 @@
 # limitations under the License.
 #
 
-import webapp2
 import json
-import crud
 import os
+
 import webapp2
-import cgi
-from google.appengine.api import users
 from google.appengine.ext.webapp import template
+
+from logic import crud
 from util.sessions import Session
-import crud
+
 
 session = Session()
 
@@ -46,26 +45,19 @@ class IndexHandler(webapp2.RequestHandler):
 
 class addLyrics(webapp2.RequestHandler):
     def post(self):
-        year = int(self.request.get("year"))
-        artist = self.request.get("artist")
-        remix = self.request.get("remix")
-        if remix == "Yes":
-            is_remix = True
-        else:
-            is_remix = False
-        title = self.request.get("title")
-        lyrics = self.request.get("lyrics")
-        result = crud.add_lyrics(_artist=artist, _year=year, _remix=is_remix, _title=title, _lyrics=lyrics)
+        request = self.request.body()
+        data = json.loads(request)
+        lyrics_text = data["lyrics"]
+        song_id = data["song_id"]
+        result = crud.add_lyrics(lyrics_text,song_id)
         self.response.headers['Content-Type'] = 'application/json'
+        self.response.set_status(200)
         self.response.write(json.dumps(result))
         #shld yu really be returning this? well, lets see how we can manipulate it on the client
 
+
     def get(self):
-        """
-
-
-        """
-        pass
+        self.response.set_status(405, getResponseMessage('405'))
 
 
 class getLyricsByTitle(webapp2.RequestHandler):
@@ -82,10 +74,28 @@ class getLyricsByTitle(webapp2.RequestHandler):
         self.response.write(json.dumps(song_details))
 
     def post(self):
-        """
+        self.response.set_status(405, getResponseMessage('405'))
 
 
-        """
+class addSong(webapp2.RequestHandler):
+    def post(self):
+        request = self.request.body()
+        data = json.loads(request)
+        year = data["year"]
+        artist = data["artist"]
+        remix = data["remix"]
+        title = data["title"]
+        result = crud.add_lyrics(_artist=artist, _year=year, _remix=remix, _title=title)
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.set_status(201, getResponseMessage('201'))
+        self.response.write(json.dumps(result))
+
+
+class getSongsByGenre(webapp2.RequestHandler):
+    def post(self):
+        self.response.set_status('405', getResponseMessage('405'))
+
+    def get(self):
         pass
 
 
@@ -99,6 +109,8 @@ class getLyricsByArtist(webapp2.RequestHandler):
         data = json.loads(request)
         artist = data["artist"]
         songs_result = crud.get_lyrics_by_artist(artist)
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.set_status(200)
         self.response.write(json.dumps(songs_result))
 
     def post(self):
@@ -106,7 +118,17 @@ class getLyricsByArtist(webapp2.RequestHandler):
 
 
         """
-        pass
+        self.response.set_status('405', getResponseMessage('405'))
+
+
+def getResponseMessage(code):
+    return {'201': 'Resource Successfully Created',
+            '401': 'Unauthorized Request; Please make sure you are Authorized',
+            '400': 'That was a bad request; Be sure to modify your request before retrying',
+            '404': 'Resource was not found',
+            '405': 'That method is not allowed on this resource. Please refer to the API documentation',
+            '500': 'Internal Server Error; Please contact Admin if this persists',
+            '204': 'No content to send'}[code]
 
 
 def render(handler, template_file="index.html", data={}):
@@ -118,8 +140,8 @@ def render(handler, template_file="index.html", data={}):
     :return:
     """
     temp = os.path.join(
-    os.path.dirname(__file__),
-    'templates/' + template_file)
+        os.path.dirname(__file__),
+        'templates/' + template_file)
     if not os.path.isfile(temp):
         return False
 
@@ -128,12 +150,20 @@ def render(handler, template_file="index.html", data={}):
     newval['path'] = handler.request.path
     handler.session = session
 
-#love this part
+    #love this part
     outStr = template.render(temp, data)
     handler.response.out.write(unicode(outStr))
     return True
 
 
+#how do you authorize the apps that will be calling yur API
 app = webapp2.WSGIApplication([
-    ('/', IndexHandler), ('/addLyrics', addLyrics), ('/getLyricsByTitle', getLyricsByTitle), ('/getLyricsByArtist', getLyricsByArtist)
-], debug=True)
+                                  ('/', IndexHandler),
+                                  ('/v1/song', addSong),
+                                  ('/v1/songs/genre/{genre}', getSongsByGenre),
+                                  ('/v1/lyric', addLyrics),
+                                  ('/v1/lyrics/artist/{artist}', getLyricsByArtist),
+                                  ('/v1/lyrics/title/{title}', getLyricsByTitle)
+
+
+                              ], debug=True)

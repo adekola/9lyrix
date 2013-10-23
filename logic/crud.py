@@ -1,10 +1,10 @@
 __author__ = 'adekola'
 
-from google.appengine.ext import ndb
-from model import Song
+from models.models import Song, Lyrics, Lyrics_Note
+from google.appengine.api import users
 
 
-def add_lyrics(_artist, _year, _title, _remix, _lyrics):
+def add_lyrics(lyrics_text, song_id):
     """
     method to add a new song with its details to the data store
 
@@ -15,15 +15,17 @@ def add_lyrics(_artist, _year, _title, _remix, _lyrics):
     :param _lyrics: The lyrics of the song -  a Text property so it can accommodate lengthy lyrics
     :return: a Song object i.e. the newly created song
     """
-    new_song = Song()
-    new_song.artist = _artist
-    new_song.lyrics = _lyrics
-    new_song.year = _year
-    new_song.title = _title
-    new_song.remix = _remix
-    id = new_song.put()
-    song_result = {"artist": _artist, "year": _year, "lyrics": _lyrics, "remix": _remix, "title": _title, "id": id.id()}
-    return song_result
+    lyric = Lyrics()
+    lyric.added_by = users.get_current_user()
+    lyric.lyrics_text = lyrics_text
+    lyric.is_approved = users.is_current_user_admin() #aproved if the user is admin, else not
+    key = lyric.put()
+    lyric_id = key.id()
+    song = Song.get_by_id(song_id)
+    song.lyric_id = lyric_id
+    song.put()
+    result = {"lyrics": lyrics_text, "song_title": song.title, "song_id": song.key.id()}
+    return result
 
 
 def update_song(_id, _year, _artist, _lyrics):
@@ -52,10 +54,13 @@ def get_lyrics_by_artist(_artist):
     songs_result = list()
     if len(songs_query) > 0:
         for s in songs_query:
-            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.remix, "lyrics": s.lyrics}
+            lyrics = Lyrics.get_by_id(s.lyric_id)
+            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.remix, "lyrics": lyrics}
             songs_result.append(song)
+            return songs_result
 
-    return songs_result
+    else:
+        return False
 
 
 def get_song(_id):
@@ -68,7 +73,7 @@ def get_song(_id):
     """
     song = Song.get_by_id(_id)
     if song is not None:
-        return song
+        return song.to_dict()
     else:
         return None
 
@@ -76,7 +81,29 @@ def get_song(_id):
 def get_lyrics_with_title(_title):
     song = Song.query(Song.title == _title)
     if song is not None:
-        song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year, "lyrics": song.lyrics}
+        lyrics = Lyrics.get_by_id(song.lyric_id)
+        song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year, "lyrics": lyrics}
         return song_details
     else:
         return False
+
+
+def add_song(_year, _artist, _title, _is_remix):
+    song = Song()
+    song.artist = _artist
+    song.year = _year
+    song.is_remix = _is_remix
+    song.title = _title
+    song.put()
+    result = {"song_details": song.to_dict(), "id": song.key.id()}
+
+
+def add_lyrics_note(note_text, lyric_id):
+    lyrics_note = Lyrics_Note()
+    lyrics_note.added_by = users.get_current_user()
+    lyrics_note.note_text = note_text
+    lyrics_note.lyric_id = lyric_id
+    id = lyrics_note.put().id()
+    result = {"note_id": id, "note_details": lyrics_note.to_dict()}
+    return result
+
