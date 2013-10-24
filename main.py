@@ -24,24 +24,15 @@ from google.appengine.ext.webapp import template
 from logic import crud
 from util.sessions import Session
 
+# You should seriously find a means of Extracting a method to prepare the response to each request based on the
+# peculiarities of that request..i.e. refactor the call to set_status(), getResponseMessage() and self.response.write()
 
 session = Session()
-
-
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        """
-
-
-        """
-        self.response.write('Hello world!')
-
 
 class IndexHandler(webapp2.RequestHandler):
     def get(self):
         #return the web page for landing page
         render(self, "index.html")
-
 
 class addLyrics(webapp2.RequestHandler):
     def post(self):
@@ -59,7 +50,6 @@ class addLyrics(webapp2.RequestHandler):
     def get(self):
         self.response.set_status(405, getResponseMessage('405'))
 
-
 class getLyricsByTitle(webapp2.RequestHandler):
     def get(self):
         """
@@ -76,7 +66,6 @@ class getLyricsByTitle(webapp2.RequestHandler):
     def post(self):
         self.response.set_status(405, getResponseMessage('405'))
 
-
 class addSong(webapp2.RequestHandler):
     def post(self):
         request = self.request.body()
@@ -90,14 +79,12 @@ class addSong(webapp2.RequestHandler):
         self.response.set_status(201, getResponseMessage('201'))
         self.response.write(json.dumps(result))
 
-
 class getSongsByGenre(webapp2.RequestHandler):
     def post(self):
         self.response.set_status('405', getResponseMessage('405'))
 
     def get(self):
         pass
-
 
 class getLyricsByArtist(webapp2.RequestHandler):
     def get(self):
@@ -108,10 +95,10 @@ class getLyricsByArtist(webapp2.RequestHandler):
         request = self.request.body()
         data = json.loads(request)
         artist = data["artist"]
-        songs_result = crud.get_lyrics_by_artist(artist)
+        lyrics_result = crud.get_lyrics_by_artist(artist)
         self.response.headers['Content-Type'] = 'application/json'
         self.response.set_status(200)
-        self.response.write(json.dumps(songs_result))
+        self.response.write(json.dumps(lyrics_result))
 
     def post(self):
         """
@@ -119,7 +106,37 @@ class getLyricsByArtist(webapp2.RequestHandler):
 
         """
         self.response.set_status('405', getResponseMessage('405'))
+        response = {"response": getResponseMessage(405)}
+        self.response.write(json.dumps(response))
 
+class getSongsByTitle(webapp2.RequestHandler):
+    def post(self):
+        """The POST method is not allowed on this URL"""
+        self.response.set_status('405', getResponseMessage('405'))
+        response = {"response": getResponseMessage(405)}
+        self.response.write(json.dumps(response))
+
+    def get(self):
+        """Yes, this URL accepts a GET method and returns a response as appropriate"""
+        request = self.request.body()
+        data = json.loads(request)
+        title = data["title"]
+        songs_result = crud.get_songs_with_title(title)
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.set_status(200)
+        response = {"response": songs_result}
+        self.response.write(response)
+
+class getSongsByArtist(webapp2.RequestHandler):
+    def get(self):
+        request = self.request.body()
+        data = json.loads(request)
+        artist = data["artist"]
+
+    def post(self):
+        self.response.set_status('405', getResponseMessage('405'))
+        response = {"response": getResponseMessage(405)}
+        self.response.write(json.dumps(response))
 
 def getResponseMessage(code):
     return {'201': 'Resource Successfully Created',
@@ -163,7 +180,9 @@ app = webapp2.WSGIApplication([
                                   ('/v1/songs/genre/{genre}', getSongsByGenre),
                                   ('/v1/lyric', addLyrics),
                                   ('/v1/lyrics/artist/{artist}', getLyricsByArtist),
-                                  ('/v1/lyrics/title/{title}', getLyricsByTitle)
+                                  ('/v1/lyrics/title/{title}', getLyricsByTitle),
+                                  ('/v1/songs/title/{title}', getSongsByTitle),
+                                  ('/v1/songs/artist/{artist}', getSongsByArtist)
 
 
                               ], debug=True)

@@ -1,8 +1,10 @@
 __author__ = 'adekola'
+"""
+This module does teh db access functions for the 9lyrix platform...here are a bunch of functions for various db access tasks
+"""
 
 from models.models import Song, Lyrics, Lyrics_Note
 from google.appengine.api import users
-
 
 def add_lyrics(lyrics_text, song_id):
     """
@@ -27,6 +29,23 @@ def add_lyrics(lyrics_text, song_id):
     result = {"lyrics": lyrics_text, "song_title": song.title, "song_id": song.key.id()}
     return result
 
+def add_lyrics_note(note_text, lyric_id):
+    lyrics_note = Lyrics_Note()
+    lyrics_note.added_by = users.get_current_user()
+    lyrics_note.note_text = note_text
+    lyrics_note.lyric_id = lyric_id
+    id = lyrics_note.put().id()
+    result = {"note_id": id, "note_details": lyrics_note.to_dict()}
+    return result
+
+def add_song(_year, _artist, _title, _is_remix):
+    song = Song()
+    song.artist = _artist
+    song.year = _year
+    song.is_remix = _is_remix
+    song.title = _title
+    song.put()
+    result = {"song_details": song.to_dict(), "id": song.key.id()}
 
 def update_song(_id, _year, _artist, _lyrics):
 
@@ -48,20 +67,25 @@ def update_song(_id, _year, _artist, _lyrics):
     song.put()
     return song
 
+def get_songs_with_title(_title):
+    query = Song.query(Song.title == _title).get()
+    songs_list = list()
+    if len(query) > 0:
+        for song in query:
+            #add a dictionary representation of the song to list
+            songs_list.append(song.to_dict)
+    #empty if not populated by the
+    return songs_list
 
-def get_lyrics_by_artist(_artist):
-    songs_query = Song.query(Song.artist == _artist)
-    songs_result = list()
-    if len(songs_query) > 0:
-        for s in songs_query:
-            lyrics = Lyrics.get_by_id(s.lyric_id)
-            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.remix, "lyrics": lyrics}
-            songs_result.append(song)
-            return songs_result
-
-    else:
-        return False
-
+def get_songs_by_artist(_artist):
+    query = Song.query(Song.artist == _artist).get()
+    songs_list = list()
+    if len(query) > 0:
+        for song in query:
+            #add a dictionary representation of the song to list
+            songs_list.append(song.to_dict)
+    #empty if not populated by the
+    return songs_list
 
 def get_song(_id):
 
@@ -77,7 +101,20 @@ def get_song(_id):
     else:
         return None
 
+def get_lyrics_by_artist(_artist):
+    songs_query = Song.query(Song.artist == _artist)
+    songs_result = list()
+    if len(songs_query) > 0:
+        for s in songs_query:
+            lyrics = Lyrics.get_by_id(s.lyric_id)
+            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.remix, "lyrics": lyrics}
+            songs_result.append(song)
+            return songs_result
 
+    else:
+        return False
+
+#review this to allow for multiple matches
 def get_lyrics_with_title(_title):
     song = Song.query(Song.title == _title)
     if song is not None:
@@ -87,23 +124,19 @@ def get_lyrics_with_title(_title):
     else:
         return False
 
+def get_lyrics_for_song(_id):
+    song = Song.get_by_id(_id)
+    if song is not None:
+        lyrics = get_lyrics_for_song(song.key.id())
+        return lyrics.to_dict()
+    else:
+        return {}
 
-def add_song(_year, _artist, _title, _is_remix):
-    song = Song()
-    song.artist = _artist
-    song.year = _year
-    song.is_remix = _is_remix
-    song.title = _title
-    song.put()
-    result = {"song_details": song.to_dict(), "id": song.key.id()}
-
-
-def add_lyrics_note(note_text, lyric_id):
-    lyrics_note = Lyrics_Note()
-    lyrics_note.added_by = users.get_current_user()
-    lyrics_note.note_text = note_text
-    lyrics_note.lyric_id = lyric_id
-    id = lyrics_note.put().id()
-    result = {"note_id": id, "note_details": lyrics_note.to_dict()}
-    return result
+#returns empty dictionary if no match is found
+def get_lyrics_with_id(_id):
+    lyrics = Lyrics.get_by_id(_id)
+    if lyrics is not None:
+        return lyrics.to_dict()
+    else:
+        return {}
 

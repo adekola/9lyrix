@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65efe0b3-73ae-450a-9573-b5c30709ed17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logic/business_rules.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/models.py" />
-      <change type="DELETED" beforePath="C:\Users\adekola\PycharmProjects\9lyrix\crud.py" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\adekola\PycharmProjects\9lyrix\model.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+    <list id="65efe0b3-73ae-450a-9573-b5c30709ed17" name="Default" comment="" />
+    <list default="true" id="7685ad9a-bcc7-4ed7-84bc-0b1ab62fc31a" name="9Lyrix" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/__init__.py" afterPath="$PROJECT_DIR$/util/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/crud.py" afterPath="$PROJECT_DIR$/logic/crud.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/models.py" afterPath="$PROJECT_DIR$/models/models.py" />
     </list>
     <ignored path="lyrify.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/model.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382436309625" ignored="false" />
-    <file path="/crud.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382450566409" ignored="false" />
-    <file path="/main.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382457474115" ignored="false" />
+    <file path="/model.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382622385262" ignored="false" />
+    <file path="/crud.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382626833855" ignored="false" />
+    <file path="/main.py" changelist="7685ad9a-bcc7-4ed7-84bc-0b1ab62fc31a" time="1382627962857" ignored="false" />
     <file path="$PROJECT_DIR$/../devfest/main.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1380795396583" ignored="false" />
     <file path="/index.html" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381501205357" ignored="false" />
     <file path="/app.yaml" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381146913707" ignored="false" />
     <file path="/explore.html" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381153355906" ignored="false" />
     <file path="/app.js" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381500879734" ignored="false" />
-    <file path="/Dummy.txt" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382449738827" ignored="false" />
-    <file path="/models.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382450161487" ignored="false" />
+    <file path="/Dummy.txt" changelist="7685ad9a-bcc7-4ed7-84bc-0b1ab62fc31a" time="1382627336499" ignored="false" />
+    <file path="/models.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382622335557" ignored="false" />
     <file path="/business_rules.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382455783472" ignored="false" />
     <file path="/*.regexp" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382455512819" ignored="false" />
+    <file path="/__init__.py" changelist="7685ad9a-bcc7-4ed7-84bc-0b1ab62fc31a" time="1382627395426" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,62 +42,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="32" selection-start="4641" selection-end="4641" vertical-scroll-proportion="-0.65384614">
+            <state line="112" column="32" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.039812647">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Google/google_appengine/google/appengine/api/users.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="296" column="4" selection-start="8564" selection-end="8564" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="36" selection-start="3161" selection-end="3161" vertical-scroll-proportion="0.96481484">
-              <folding>
-                <element signature="e#818#902#0" expanded="false" />
-                <element signature="e#841#902#0" expanded="false" />
-                <element signature="e#841#858#1" expanded="false" />
-                <element signature="e#953#1048#0" expanded="false" />
-                <element signature="e#976#1048#0" expanded="false" />
-                <element signature="e#1096#1645#0" expanded="false" />
-                <element signature="e#1589#1645#0" expanded="false" />
-                <element signature="e#1700#2107#0" expanded="false" />
-                <element signature="e#1723#1740#1" expanded="false" />
-                <element signature="e#2051#2107#0" expanded="false" />
-                <element signature="e#2684#2799#0" expanded="false" />
-                <element signature="e#2878#2895#1" expanded="false" />
-                <element signature="e#3246#3263#1" expanded="false" />
-                <element signature="e#3932#4460#0" expanded="false" />
-                <element signature="e#3932#4020#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webapp2.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Google/google_appengine/lib/webapp2-2.5.2/webapp2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="482" column="6" selection-start="16329" selection-end="16329" vertical-scroll-proportion="-19.32">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="business_rules.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic/business_rules.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
+            <state line="3" column="3" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,53 +63,62 @@
       <file leaf-file-name="crud.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logic/crud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+            <state line="133" column="0" selection-start="4496" selection-end="4496" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#159#728#1" expanded="false" />
-                <element signature="e#1212#1780#0" expanded="false" />
-                <element signature="e#1212#1644#1" expanded="false" />
-                <element signature="e#1822#2217#0" expanded="false" />
-                <element signature="e#2244#2560#0" expanded="false" />
-                <element signature="e#2244#2444#1" expanded="false" />
-                <element signature="e#2602#2900#0" expanded="false" />
-                <element signature="e#3202#3473#0" expanded="false" />
+                <element signature="e#23#155#1" expanded="false" />
+                <element signature="e#291#1289#0" expanded="false" />
+                <element signature="e#291#860#1" expanded="false" />
+                <element signature="e#1337#1608#0" expanded="false" />
+                <element signature="e#1663#1860#0" expanded="false" />
+                <element signature="e#1914#2482#0" expanded="false" />
+                <element signature="e#1914#2346#1" expanded="false" />
+                <element signature="e#2522#2808#0" expanded="false" />
+                <element signature="e#2848#3136#0" expanded="false" />
+                <element signature="e#3162#3478#0" expanded="false" />
+                <element signature="e#3162#3362#1" expanded="false" />
+                <element signature="e#3519#3916#0" expanded="false" />
+                <element signature="e#3998#4296#0" expanded="false" />
+                <element signature="e#4332#4497#0" expanded="false" />
+                <element signature="e#4577#4694#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/models.py">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="51" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statics/js/bootstrap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statics/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="32" selection-start="934" selection-end="942" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="explore.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/explore.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="39" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="177" column="34" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1050#1145#0" expanded="false" />
+                <element signature="e#1073#1145#0" expanded="false" />
+                <element signature="e#1192#1741#0" expanded="false" />
+                <element signature="e#1216#1655#0" expanded="false" />
+                <element signature="e#1685#1741#0" expanded="false" />
+                <element signature="e#1795#2202#0" expanded="false" />
+                <element signature="e#1818#2116#0" expanded="false" />
+                <element signature="e#1818#1835#1" expanded="false" />
+                <element signature="e#2146#2202#0" expanded="false" />
+                <element signature="e#2247#2724#0" expanded="false" />
+                <element signature="e#2271#2724#0" expanded="false" />
+                <element signature="e#2777#2892#0" expanded="false" />
+                <element signature="e#2801#2859#0" expanded="false" />
+                <element signature="e#2888#2892#0" expanded="false" />
+                <element signature="e#2947#3531#0" expanded="false" />
+                <element signature="e#2970#3310#0" expanded="false" />
+                <element signature="e#2970#2987#1" expanded="false" />
+                <element signature="e#3340#3531#0" expanded="false" />
+                <element signature="e#3340#3357#1" expanded="false" />
+                <element signature="e#3584#4285#0" expanded="false" />
+                <element signature="e#3608#3830#0" expanded="false" />
+                <element signature="e#3859#4285#0" expanded="false" />
+                <element signature="e#4339#4653#0" expanded="false" />
+                <element signature="e#4362#4458#0" expanded="false" />
+                <element signature="e#4488#4653#0" expanded="false" />
+                <element signature="e#4689#5189#0" expanded="false" />
+                <element signature="e#5254#5782#0" expanded="false" />
+                <element signature="e#5254#5342#1" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,6 +134,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myShowDetails" value="false" />
     <option name="myDateState">
       <MyDateState />
     </option>
@@ -185,9 +150,11 @@
         <option value="$PROJECT_DIR$/statics/js/app.js" />
         <option value="$PROJECT_DIR$/crud.py" />
         <option value="$PROJECT_DIR$/models/model.py" />
-        <option value="$PROJECT_DIR$/models/models.py" />
         <option value="$PROJECT_DIR$/logic/business_rules.py" />
+        <option value="$PROJECT_DIR$/models/models.py" />
+        <option value="C:/Program Files (x86)/Google/google_appengine/google/appengine/ext/ndb/model.py" />
         <option value="$PROJECT_DIR$/logic/crud.py" />
+        <option value="$PROJECT_DIR$/util/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -224,6 +191,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,76 +220,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lyrify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9lyrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lyrify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9lyrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lyrify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9lyrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lyrify" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="9lyrix" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
@@ -348,22 +259,6 @@
     </key>
   </component>
   <component name="RunManager" selected="App Engine server.9lyrix">
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lyrify" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="browserUrl" value="" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -386,12 +281,10 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -399,8 +292,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lyrify" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="browserUrl" value="" />
+      <option name="additionalOptions" value="" />
       <method />
     </configuration>
     <configuration default="true" type="docs" factoryName="Docutils task">
@@ -419,6 +313,23 @@
       <option name="docutils_params" value="" />
       <option name="docutils_task" value="rst2html" />
       <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lyrify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -489,31 +400,39 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
       <changelist id="65efe0b3-73ae-450a-9573-b5c30709ed17" name="Default" comment="" />
       <created>1380485971054</created>
-      <updated>1380485971054</updated>
+      <updated>1382627243758</updated>
     </task>
+    <task active="true" id="LOCAL-00001">
+      <changelist id="" name="" comment="" />
+      <changelist id="7685ad9a-bcc7-4ed7-84bc-0b1ab62fc31a" name="9Lyrix" comment="" />
+      <created>1382627241171</created>
+      <updated>1382627243909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <option name="createChangelist" value="false" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1646859" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34318182" sideWeight="0.63001746" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34848484" sideWeight="0.8353141" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36998254" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -578,27 +497,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/statics/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.yaml">
@@ -608,16 +513,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/css/jumbotron-narrow.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="1" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/js/jquery-2.0.0.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/js/bootstrap.js">
@@ -629,21 +530,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/explore.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="39" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0">
+        <state line="45" column="39" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.031657357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statics/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="32" selection-start="934" selection-end="942" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="32" selection-start="4641" selection-end="4641" vertical-scroll-proportion="-0.65384614">
+        <state line="27" column="32" selection-start="934" selection-end="942" vertical-scroll-proportion="0.24511546">
           <folding />
         </state>
       </provider>
@@ -657,61 +551,107 @@
     </entry>
     <entry file="file://C:/Program Files (x86)/Google/google_appengine/lib/webapp2-2.5.2/webapp2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="482" column="6" selection-start="16329" selection-end="16329" vertical-scroll-proportion="-19.32">
+        <state line="482" column="6" selection-start="16329" selection-end="16329" vertical-scroll-proportion="0.030195381">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/business_rules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
+        <state line="18" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.5435169">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files (x86)/Google/google_appengine/google/appengine/ext/ndb/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1215" column="27" selection-start="42164" selection-end="42164" vertical-scroll-proportion="0.19330855">
+          <folding>
+            <element signature="e#10640#10651#0" expanded="true" />
+            <marker date="1367500016000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1367500016000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1367500016000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="51" selection-start="646" selection-end="646" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="123" selection-end="123" vertical-scroll-proportion="0.15097691">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="3" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/crud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+        <state line="133" column="0" selection-start="4496" selection-end="4496" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#159#728#1" expanded="false" />
-            <element signature="e#1212#1780#0" expanded="false" />
-            <element signature="e#1212#1644#1" expanded="false" />
-            <element signature="e#1822#2217#0" expanded="false" />
-            <element signature="e#2244#2560#0" expanded="false" />
-            <element signature="e#2244#2444#1" expanded="false" />
-            <element signature="e#2602#2900#0" expanded="false" />
-            <element signature="e#3202#3473#0" expanded="false" />
+            <element signature="e#23#155#1" expanded="false" />
+            <element signature="e#291#1289#0" expanded="false" />
+            <element signature="e#291#860#1" expanded="false" />
+            <element signature="e#1337#1608#0" expanded="false" />
+            <element signature="e#1663#1860#0" expanded="false" />
+            <element signature="e#1914#2482#0" expanded="false" />
+            <element signature="e#1914#2346#1" expanded="false" />
+            <element signature="e#2522#2808#0" expanded="false" />
+            <element signature="e#2848#3136#0" expanded="false" />
+            <element signature="e#3162#3478#0" expanded="false" />
+            <element signature="e#3162#3362#1" expanded="false" />
+            <element signature="e#3519#3916#0" expanded="false" />
+            <element signature="e#3998#4296#0" expanded="false" />
+            <element signature="e#4332#4497#0" expanded="false" />
+            <element signature="e#4577#4694#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="36" selection-start="3161" selection-end="3161" vertical-scroll-proportion="0.96481484">
+        <state line="177" column="34" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#818#902#0" expanded="false" />
-            <element signature="e#841#902#0" expanded="false" />
-            <element signature="e#841#858#1" expanded="false" />
-            <element signature="e#953#1048#0" expanded="false" />
-            <element signature="e#976#1048#0" expanded="false" />
-            <element signature="e#1096#1645#0" expanded="false" />
-            <element signature="e#1589#1645#0" expanded="false" />
-            <element signature="e#1700#2107#0" expanded="false" />
-            <element signature="e#1723#1740#1" expanded="false" />
-            <element signature="e#2051#2107#0" expanded="false" />
-            <element signature="e#2684#2799#0" expanded="false" />
-            <element signature="e#2878#2895#1" expanded="false" />
-            <element signature="e#3246#3263#1" expanded="false" />
-            <element signature="e#3932#4460#0" expanded="false" />
-            <element signature="e#3932#4020#1" expanded="false" />
+            <element signature="e#1050#1145#0" expanded="false" />
+            <element signature="e#1073#1145#0" expanded="false" />
+            <element signature="e#1192#1741#0" expanded="false" />
+            <element signature="e#1216#1655#0" expanded="false" />
+            <element signature="e#1685#1741#0" expanded="false" />
+            <element signature="e#1795#2202#0" expanded="false" />
+            <element signature="e#1818#2116#0" expanded="false" />
+            <element signature="e#1818#1835#1" expanded="false" />
+            <element signature="e#2146#2202#0" expanded="false" />
+            <element signature="e#2247#2724#0" expanded="false" />
+            <element signature="e#2271#2724#0" expanded="false" />
+            <element signature="e#2777#2892#0" expanded="false" />
+            <element signature="e#2801#2859#0" expanded="false" />
+            <element signature="e#2888#2892#0" expanded="false" />
+            <element signature="e#2947#3531#0" expanded="false" />
+            <element signature="e#2970#3310#0" expanded="false" />
+            <element signature="e#2970#2987#1" expanded="false" />
+            <element signature="e#3340#3531#0" expanded="false" />
+            <element signature="e#3340#3357#1" expanded="false" />
+            <element signature="e#3584#4285#0" expanded="false" />
+            <element signature="e#3608#3830#0" expanded="false" />
+            <element signature="e#3859#4285#0" expanded="false" />
+            <element signature="e#4339#4653#0" expanded="false" />
+            <element signature="e#4362#4458#0" expanded="false" />
+            <element signature="e#4488#4653#0" expanded="false" />
+            <element signature="e#4689#5189#0" expanded="false" />
+            <element signature="e#5254#5782#0" expanded="false" />
+            <element signature="e#5254#5342#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="32" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.039812647">
+          <folding />
         </state>
       </provider>
     </entry>

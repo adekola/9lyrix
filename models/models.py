@@ -4,7 +4,7 @@ from google.appengine.ext import ndb
 from google.appengine.ext.ndb import Model
 
 
-class Song(Model):
+class Song(ndb.Model):
     title = ndb.StringProperty()
     lyric_id = ndb.IntegerProperty()
     year = ndb.IntegerProperty()
