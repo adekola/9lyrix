@@ -12,11 +12,20 @@
             //retrieve the field values
             event.preventDefault();
 
-            var form_data = $('form').serialize();
+            var is_remix = $('#remix').value == "Yes";
+            var form_data = {
+                title: $('#title').val(),
+                artist: $('#artist').val(),
+                year: $('#year').val(),
+                remix: is_remix
+            }
+
+            var post_data = JSON.stringify(form_data);
+
             $.ajax({
                 cache: false,
-                url: "http://" + window.location.host+"/addLyrics",
-                data: form_data,
+                url: "http://" + window.location.host+"/v1/song",
+                data: post_data,
                 dataType: 'html',
                 type: 'POST',
                 success: function (json) {
@@ -25,22 +34,25 @@
                     $('#submitSuccess').removeAttr("hidden").fadeIn();
                 },
                 fail: function (json) {
-                    $('#ajaxFail').show();
+                    $('#submitFail').show();
                 }
             });
         });
 
         //set what happens when the Add New button is clicked
         $('#addNew').click(function () {
-            $.get("http://" + window.location.host);
+            $.get("http://localhost");
         });
 
         $('#clearForm').click(function () {
-            $('#artist').clearData();
-            $('#year').clearData();
+            $('#artist').value = "";
+            $('#year').value = "";
             $('#remix').selectedIndex = 0;
-            $('#lyrics').clearData();
-            $('#title').clearData();
+            $('#lyrics').value = "";
+            $('#title').value = "";
         });
+
+
+
 })(jQuery);
 

@@ -23,6 +23,7 @@ from google.appengine.ext.webapp import template
 
 from logic import crud
 from util.sessions import Session
+from google.appengine.api import users
 
 # You should seriously find a means of Extracting a method to prepare the response to each request based on the
 # peculiarities of that request..i.e. refactor the call to set_status(), getResponseMessage() and self.response.write()
@@ -34,18 +35,29 @@ class IndexHandler(webapp2.RequestHandler):
         #return the web page for landing page
         render(self, "index.html")
 
+class AdminHandler(webapp2.RequestHandler):
+        def get(self):
+            user = users.get_current_user()
+            if users.is_current_user_admin():
+                user_data = {"user_id": user.user_id(), "name": user.nickname(), "logout_url": users.create_logout_url('/')}
+                render(self, "admin.html", user_data)
+            else:
+                login_url = users.create_login_url('/admin')
+                data = {"login_url": login_url}
+                render(self, "admin.html", data)
+
+
 class addLyrics(webapp2.RequestHandler):
     def post(self):
-        request = self.request.body()
+        request = self.request.body
         data = json.loads(request)
         lyrics_text = data["lyrics"]
         song_id = data["song_id"]
-        result = crud.add_lyrics(lyrics_text,song_id)
+        result = crud.add_lyrics(lyrics_text, song_id)
         self.response.headers['Content-Type'] = 'application/json'
         self.response.set_status(200)
         self.response.write(json.dumps(result))
         #shld yu really be returning this? well, lets see how we can manipulate it on the client
-
 
     def get(self):
         self.response.set_status(405, getResponseMessage('405'))
@@ -68,13 +80,13 @@ class getLyricsByTitle(webapp2.RequestHandler):
 
 class addSong(webapp2.RequestHandler):
     def post(self):
-        request = self.request.body()
+        request = self.request.body
         data = json.loads(request)
-        year = data["year"]
+        year = int(data["year"])
         artist = data["artist"]
         remix = data["remix"]
         title = data["title"]
-        result = crud.add_lyrics(_artist=artist, _year=year, _remix=remix, _title=title)
+        result = crud.add_song(_artist=artist, _year=year, _is_remix=remix, _title=title)
         self.response.headers['Content-Type'] = 'application/json'
         self.response.set_status(201, getResponseMessage('201'))
         self.response.write(json.dumps(result))
@@ -176,6 +188,7 @@ def render(handler, template_file="index.html", data={}):
 #how do you authorize the apps that will be calling yur API
 app = webapp2.WSGIApplication([
                                   ('/', IndexHandler),
+                                  ('/admin', AdminHandler),
                                   ('/v1/song', addSong),
                                   ('/v1/songs/genre/{genre}', getSongsByGenre),
                                   ('/v1/lyric', addLyrics),

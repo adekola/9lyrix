@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>9Lyrix App...Admin Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/statics/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/statics/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../statics/js/html5shiv.js"></script>
+    <script src="../statics/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+        <h3 class="text-muted">9lyrix Admin</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>9lyrix Admin</h1>
+
+        {% if user_id == None%}
+        <p><a class="btn btn-lg btn-success" href="{{login_url}}" id=>Sign In With Google</a></p>
+        {% else %}
+        <p> Welcome<a href="{{logout_url}}"> {{ name }} </a> </p>
+        {% endif %}
+    </div>
+
+    {% block content %}
+
+
+    {% endblock %}
+
+    <div class="footer">
+        <p>&copy; 9lyrix 2013 &middot; Made with love in 9ja </p>
+    </div>
+</div>
+<!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+</body>
+</html>
