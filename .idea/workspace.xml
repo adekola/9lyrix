@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65efe0b3-73ae-450a-9573-b5c30709ed17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/js/app.js" afterPath="$PROJECT_DIR$/statics/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/explore.html" afterPath="$PROJECT_DIR$/templates/explore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lyrify.iws" />
@@ -19,7 +14,7 @@
     <file path="/app.yaml" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381146913707" ignored="false" />
     <file path="/explore.html" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381153355906" ignored="false" />
     <file path="/app.js" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382713170959" ignored="false" />
-    <file path="/Dummy.txt" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382714184949" ignored="false" />
+    <file path="/Dummy.txt" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1383367170526" ignored="false" />
     <file path="/admin.html" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1382731362666" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,15 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sessions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/sessions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,32 +47,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="10" selection-start="4350" selection-end="4447" vertical-scroll-proportion="-0.96153843">
-              <folding>
-                <element signature="tag#head#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#input#0;tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#input#0;tag#div#0;tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#input#0;tag#div#0;tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#select#0;tag#div#0;tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#5;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#5;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
+            <state line="111" column="10" selection-start="4350" selection-end="4447" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,62 +62,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="58" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1089#1184#0" expanded="false" />
-                <element signature="e#1112#1184#0" expanded="false" />
-                <element signature="e#1745#2292#0" expanded="false" />
-                <element signature="e#1769#2207#0" expanded="false" />
-                <element signature="e#2236#2292#0" expanded="false" />
-                <element signature="e#2346#2753#0" expanded="false" />
-                <element signature="e#2369#2667#0" expanded="false" />
-                <element signature="e#2369#2386#1" expanded="false" />
-                <element signature="e#2697#2753#0" expanded="false" />
-                <element signature="e#2798#3279#0" expanded="false" />
-                <element signature="e#2822#3279#0" expanded="false" />
-                <element signature="e#3332#3447#0" expanded="false" />
-                <element signature="e#3356#3414#0" expanded="false" />
-                <element signature="e#3443#3447#0" expanded="false" />
-                <element signature="e#3502#4086#0" expanded="false" />
-                <element signature="e#3525#3865#0" expanded="false" />
-                <element signature="e#3525#3542#1" expanded="false" />
-                <element signature="e#3895#4086#0" expanded="false" />
-                <element signature="e#3895#3912#1" expanded="false" />
-                <element signature="e#4139#4840#0" expanded="false" />
-                <element signature="e#4163#4385#0" expanded="false" />
-                <element signature="e#4414#4840#0" expanded="false" />
-                <element signature="e#4894#5208#0" expanded="false" />
-                <element signature="e#4917#5013#0" expanded="false" />
-                <element signature="e#5043#5208#0" expanded="false" />
-                <element signature="e#5244#5744#0" expanded="false" />
-                <element signature="e#5809#6337#0" expanded="false" />
-                <element signature="e#5809#5897#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.35690236">
-              <folding>
-                <element signature="e#566#712#0" expanded="false" />
-                <element signature="e#1482#1567#0" expanded="false" />
-              </folding>
+            <state line="38" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statics/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jumbotron-narrow.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/statics/css/jumbotron-narrow.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="1" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statics/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
+            <state line="39" column="11" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.4391144">
               <folding>
                 <element signature="e#0#148#0" expanded="false" />
+                <element signature="e#445#618#0" expanded="false" />
+                <element signature="e#695#1247#0" expanded="false" />
+                <element signature="e#931#1129#0" expanded="false" />
+                <element signature="e#1169#1233#0" expanded="false" />
+                <element signature="e#1364#1414#0" expanded="false" />
+                <element signature="e#1460#1659#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,9 +119,7 @@
         <entry file="file://$PROJECT_DIR$/models/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#24#60#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -351,28 +303,12 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/pollific/pollific" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager" selected="App Engine server.9lyrix">
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lyrify" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="browserUrl" value="" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -395,12 +331,10 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
+      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -408,8 +342,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lyrify" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="browserUrl" value="" />
+      <option name="additionalOptions" value="" />
       <method />
     </configuration>
     <configuration default="true" type="docs" factoryName="Docutils task">
@@ -428,6 +363,23 @@
       <option name="docutils_params" value="" />
       <option name="docutils_task" value="rst2html" />
       <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lyrify" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -489,18 +441,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35378787" sideWeight="0.6303237" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3780303" sideWeight="0.6303237" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36967632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36967632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -579,11 +531,24 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/explore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="-2.6153846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/sessions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/util/__init__.py">
@@ -593,21 +558,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/sessions.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/jumbotron-narrow.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+        <state line="111" column="10" selection-start="4350" selection-end="4447" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -619,34 +572,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/js/bootstrap.js">
+    <entry file="file://$PROJECT_DIR$/templates/admin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/explore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="-2.6153846">
+        <state line="38" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statics/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#148#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#24#60#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="58" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logic/crud.py">
@@ -656,79 +598,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="10" selection-start="4350" selection-end="4447" vertical-scroll-proportion="-0.96153843">
-          <folding>
-            <element signature="tag#head#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#ul#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#input#0;tag#div#0;tag#div#1;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#input#0;tag#div#0;tag#div#2;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#input#0;tag#div#0;tag#div#3;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#select#0;tag#div#0;tag#div#4;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#5;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#5;tag#fieldset#0;tag#form#0;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#2;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/statics/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="58" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1089#1184#0" expanded="false" />
-            <element signature="e#1112#1184#0" expanded="false" />
-            <element signature="e#1745#2292#0" expanded="false" />
-            <element signature="e#1769#2207#0" expanded="false" />
-            <element signature="e#2236#2292#0" expanded="false" />
-            <element signature="e#2346#2753#0" expanded="false" />
-            <element signature="e#2369#2667#0" expanded="false" />
-            <element signature="e#2369#2386#1" expanded="false" />
-            <element signature="e#2697#2753#0" expanded="false" />
-            <element signature="e#2798#3279#0" expanded="false" />
-            <element signature="e#2822#3279#0" expanded="false" />
-            <element signature="e#3332#3447#0" expanded="false" />
-            <element signature="e#3356#3414#0" expanded="false" />
-            <element signature="e#3443#3447#0" expanded="false" />
-            <element signature="e#3502#4086#0" expanded="false" />
-            <element signature="e#3525#3865#0" expanded="false" />
-            <element signature="e#3525#3542#1" expanded="false" />
-            <element signature="e#3895#4086#0" expanded="false" />
-            <element signature="e#3895#3912#1" expanded="false" />
-            <element signature="e#4139#4840#0" expanded="false" />
-            <element signature="e#4163#4385#0" expanded="false" />
-            <element signature="e#4414#4840#0" expanded="false" />
-            <element signature="e#4894#5208#0" expanded="false" />
-            <element signature="e#4917#5013#0" expanded="false" />
-            <element signature="e#5043#5208#0" expanded="false" />
-            <element signature="e#5244#5744#0" expanded="false" />
-            <element signature="e#5809#6337#0" expanded="false" />
-            <element signature="e#5809#5897#1" expanded="false" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.html">
+    <entry file="file://$PROJECT_DIR$/statics/css/jumbotron-narrow.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.35690236">
+        <state line="12" column="1" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="11" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.4391144">
           <folding>
-            <element signature="e#566#712#0" expanded="false" />
-            <element signature="e#1482#1567#0" expanded="false" />
+            <element signature="e#0#148#0" expanded="false" />
+            <element signature="e#445#618#0" expanded="false" />
+            <element signature="e#695#1247#0" expanded="false" />
+            <element signature="e#931#1129#0" expanded="false" />
+            <element signature="e#1169#1233#0" expanded="false" />
+            <element signature="e#1364#1414#0" expanded="false" />
+            <element signature="e#1460#1659#0" expanded="false" />
           </folding>
         </state>
       </provider>
