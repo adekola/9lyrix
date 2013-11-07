@@ -1,6 +1,6 @@
 __author__ = 'adekola'
 """
-This module does teh db access functions for the 9lyrix platform...here are a bunch of functions for various db access tasks
+This module does the db access functions for the 9lyrix platform...here are a bunch of functions for various db access tasks
 """
 
 from models.models import Song, Lyrics, Lyrics_Note
@@ -44,8 +44,10 @@ def add_song(_year, _artist, _title, _is_remix):
     song.year = _year
     song.is_remix = _is_remix
     song.title = _title
-    song.put()
-    result = {"song_details": song.to_dict(), "id": song.key.id()}
+    key = song.put()
+    id = str(key.id())
+    result = {"title": _title, "id": id, "year": _year, "is_remix": _is_remix, "artist": _artist}
+    return result
 
 def update_song(_id, _year, _artist, _lyrics):
 
@@ -99,7 +101,7 @@ def get_song(_id):
     if song is not None:
         return song.to_dict()
     else:
-        return None
+        return {}
 
 def get_lyrics_by_artist(_artist):
     songs_query = Song.query(Song.artist == _artist)
@@ -112,7 +114,7 @@ def get_lyrics_by_artist(_artist):
             return songs_result
 
     else:
-        return False
+        return {}
 
 #review this to allow for multiple matches
 def get_lyrics_with_title(_title):
@@ -122,7 +124,7 @@ def get_lyrics_with_title(_title):
         song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year, "lyrics": lyrics}
         return song_details
     else:
-        return False
+        return {}
 
 def get_lyrics_for_song(_id):
     song = Song.get_by_id(_id)

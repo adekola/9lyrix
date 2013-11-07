@@ -192,8 +192,8 @@ app = webapp2.WSGIApplication([
                                   ('/v1/song', addSong),
                                   ('/v1/songs/genre/{genre}', getSongsByGenre),
                                   ('/v1/lyric', addLyrics),
-                                  ('/v1/lyrics/artist/{artist}', getLyricsByArtist),
-                                  ('/v1/lyrics/title/{title}', getLyricsByTitle),
+                                  ('/v1/lyrics/artist/{artist}', getLyricsByArtist), #mobile client
+                                  ('/v1/lyrics/title/{title}', getLyricsByTitle), #mobile client
                                   ('/v1/songs/title/{title}', getSongsByTitle),
                                   ('/v1/songs/artist/{artist}', getSongsByArtist)
 

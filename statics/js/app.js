@@ -31,7 +31,7 @@
                 success: function (json) {
                     $('form').fadeOut();
                     $('#ajaxResult').append(json).fadeIn().show();
-                    $('#submitSuccess').removeAttr("hidden").fadeIn();
+                    $('#submitSuccess').fadeIn().show();
                 },
                 fail: function (json) {
                     $('#submitFail').show();
