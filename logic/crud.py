@@ -134,6 +134,13 @@ def get_lyrics_for_song(_id):
     else:
         return {}
 
+def get_all_songs():
+    songs = Song.query().fetch()
+    songs_list = list()
+    for song in songs:
+        songs_list.append({'title': song.title, 'artist': song.artist, 'year': song.year, 'id': song.key.id(), 'remix': song.is_remix})
+
+    return songs_list
 #returns empty dictionary if no match is found
 def get_lyrics_with_id(_id):
     lyrics = Lyrics.get_by_id(_id)

@@ -20,6 +20,8 @@ class Lyrics(ndb.Model):
     added_by = ndb.UserProperty()
     is_approved = ndb.BooleanProperty(default=False)
 
+    d
+
 
 class Lyrics_Note(ndb.Model):
     added_by = ndb.UserProperty()
