@@ -42,7 +42,7 @@
 
         //set what happens when the Add New button is clicked
         $('#addNew').click(function () {
-            $.get("http://"+ window.location.host);
+
         });
 
         $('#clearForm').click(function () {

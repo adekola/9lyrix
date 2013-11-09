@@ -83,7 +83,7 @@ class addSong(base_handler.BaseHandler):
         remix = bool(data["remix"])
         title = data["title"]
         if data.keys().__contains__('lyrics'):
-            result = crud.add_song(_year=year,_artist=artist, _title=title,_is_remix=remix,lyrics_text=lyrics_text,)
+            result = crud.add_song(_year=year, _artist=artist, _title=title, _is_remix=remix, lyrics=lyrics_text)
         else:
             result = crud.add_song(_artist=artist, _year=year, _is_remix=remix, _title=title)
 
@@ -175,8 +175,8 @@ app = webapp2.WSGIApplication([
                                   ('/v1/songs/', getAllSongs),
                                   ('/v1/songs/', getSongsByGenre),
                                   ('/v1/lyrics/', addLyrics),
-                                  ('/v1/getLyricsByArtist', getLyricsByArtist), #mobile client
-                                  ('/v1/getLyricsByTitle', getLyricsByTitle), #mobile client
+                                  ('/v1/lyrics/byArtist', getLyricsByArtist), #mobile client
+                                  ('/v1/lyrics/byTitle', getLyricsByTitle), #mobile client
                                   ('/v1/songs/title', getSongsByTitle),
                                   ('/v1/songs/artist', getSongsByArtist)
                               ], debug=True)
