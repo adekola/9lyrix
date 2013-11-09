@@ -146,9 +146,10 @@ def get_lyrics_by_artist(_artist):
 
 #review this to allow for multiple matches
 def get_lyrics_with_title(_title):
-    song = Song.query(Song.title == _title)
+    song = Song.query(Song.title == _title).fetch()[0]
     if song is not None:
-        lyrics = Lyrics.get_by_id(song.lyric_id)
+        lyric_id = song.lyric_id
+        lyrics = Lyrics.get_by_id(lyric_id)
         song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year,
                         "lyrics": lyrics}
         return song_details

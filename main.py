@@ -66,11 +66,9 @@ class getLyricsByTitle(base_handler.BaseHandler):
 
 
         """
-        request = self.request.body
-        data = json.loads(request)
-        title = data["title"]
+        title = self.request.get('title')
         song_details = crud.get_lyrics_with_title(title)
-        self.render_response(song_details,200)
+        self.render_response(song_details, 200)
 
     def post(self):
         self.render_response({}, 405)
@@ -104,11 +102,9 @@ class getLyricsByArtist(base_handler.BaseHandler):
 
 
         """
-        request = self.request.body()
-        data = json.loads(request)
-        artist = data["artist"]
+        artist = self.request.get('artist')
         lyrics_result = crud.get_lyrics_by_artist(artist)
-        self.render_response(lyrics_result,200)
+        self.render_response(lyrics_result, 200)
 
     def post(self):
         """
@@ -177,10 +173,10 @@ app = webapp2.WSGIApplication([
                                   ('/admin/', AdminHandler),
                                   ('/v1/song/', addSong),
                                   ('/v1/songs/', getAllSongs),
-                                  ('/v1/songs/genre/{genre}/', getSongsByGenre),
+                                  ('/v1/songs/', getSongsByGenre),
                                   ('/v1/lyrics/', addLyrics),
-                                  ('/v1/lyrics/artist/{artist}/', getLyricsByArtist), #mobile client
-                                  ('/v1/lyrics/title/{title}/', getLyricsByTitle), #mobile client
-                                  ('/v1/songs/title/{title}/', getSongsByTitle),
-                                  ('/v1/songs/artist/{artist}/', getSongsByArtist)
+                                  ('/v1/getLyricsByArtist', getLyricsByArtist), #mobile client
+                                  ('/v1/getLyricsByTitle', getLyricsByTitle), #mobile client
+                                  ('/v1/songs/title', getSongsByTitle),
+                                  ('/v1/songs/artist', getSongsByArtist)
                               ], debug=True)
