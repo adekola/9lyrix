@@ -67,7 +67,7 @@ class getLyricsByTitle(base_handler.BaseHandler):
 
         """
         title = self.request.get('title')
-        song_details = crud.get_lyrics_with_title(title)
+        song_details = crud.get_lyrics_with_title(title.lower())
         self.render_response(song_details, 200)
 
     def post(self):
@@ -103,7 +103,7 @@ class getLyricsByArtist(base_handler.BaseHandler):
 
         """
         artist = self.request.get('artist')
-        lyrics_result = crud.get_lyrics_by_artist(artist)
+        lyrics_result = crud.get_lyrics_by_artist(artist.lower())
         self.render_response(lyrics_result, 200)
 
     def post(self):

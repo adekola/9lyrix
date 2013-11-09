@@ -38,10 +38,10 @@ from google.appengine.api import users
 
 def add_song(_year, _artist, _title, _is_remix, lyrics):
     song = Song()
-    song.artist = _artist
+    song.artist = _artist.lower()
     song.year = _year
     song.is_remix = _is_remix
-    song.title = _title
+    song.title = _title.lower()
     song.lyrics = lyrics
     key = song.put()
     song_id = key.id()
