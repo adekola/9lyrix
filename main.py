@@ -53,10 +53,8 @@ class addLyrics(base_handler.BaseHandler):
         data = json.loads(request)
         lyrics_text = data["lyrics"]
         song_id = data["song_id"]
-        result = crud.add_lyrics(lyrics_text, song_id)
-        self.response.headers['Content-Type'] = 'application/json'
-        self.response.set_status(200)
-        self.response.write(json.dumps(result))
+        result = crud.add_lyrics(lyrics_text,song_id)
+        self.render_response(result, 201)
         #shld yu really be returning this? well, lets see how we can manipulate it on the client
 
     def get(self):
@@ -81,11 +79,16 @@ class addSong(base_handler.BaseHandler):
     def post(self):
         request = self.request.body
         data = json.loads(request)
+        lyrics_text = data["lyrics"]
         year = int(data["year"])
         artist = data["artist"]
         remix = bool(data["remix"])
         title = data["title"]
-        result = crud.add_song(_artist=artist, _year=year, _is_remix=remix, _title=title)
+        if data.keys().__contains__('lyrics'):
+            result = crud.add_song(_year=year,_artist=artist, _title=title,_is_remix=remix,lyrics_text=lyrics_text,)
+        else:
+            result = crud.add_song(_artist=artist, _year=year, _is_remix=remix, _title=title)
+
         self.render_response(result, 201)
 
 class getSongsByGenre(base_handler.BaseHandler):

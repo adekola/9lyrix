@@ -6,6 +6,7 @@ This module does the db access functions for the 9lyrix platform...here are a bu
 from models.models import Song, Lyrics, Lyrics_Note
 from google.appengine.api import users
 
+
 def add_lyrics(lyrics_text, song_id):
     """
     method to add a new song with its details to the data store
@@ -22,12 +23,18 @@ def add_lyrics(lyrics_text, song_id):
     lyric.lyrics_text = lyrics_text
     lyric.is_approved = users.is_current_user_admin() #aproved if the user is admin, else not
     key = lyric.put()
-    lyric_id = key.id()
+    lyric_id = str(key.id())
     song = Song.get_by_id(song_id)
     song.lyric_id = lyric_id
     song.put()
-    result = {"lyrics": lyrics_text, "song_title": song.title, "song_id": song.key.id()}
+    result = \
+        {
+            "lyrics_text": lyrics_text,
+            "song_id": song_id,
+            "lyric_id": lyric_id,
+        }
     return result
+
 
 def add_lyrics_note(note_text, lyric_id):
     lyrics_note = Lyrics_Note()
@@ -38,19 +45,37 @@ def add_lyrics_note(note_text, lyric_id):
     result = {"note_id": id, "note_details": lyrics_note.to_dict()}
     return result
 
-def add_song(_year, _artist, _title, _is_remix):
+
+#Adds a song with it lyrics if included, else adds just the song without lyrics
+def add_song(_year, _artist, _title, _is_remix, lyrics_text=None):
+    lyric = Lyrics()
+    lyric.added_by = users.get_current_user()
+    lyric.lyrics_text = lyrics_text
+    lyric.is_approved = users.is_current_user_admin() #aproved if the user is admin, else not
+    key = lyric.put()
+    lyric_id = key.id()
     song = Song()
     song.artist = _artist
     song.year = _year
     song.is_remix = _is_remix
     song.title = _title
+    song.lyric_id = lyric_id
     key = song.put()
-    id = str(key.id())
-    result = {"title": _title, "id": id, "year": _year, "is_remix": _is_remix, "artist": _artist}
+    song_id = key.id()
+    result = \
+        {
+            "title": _title,
+            "song_id": song_id,
+            "year": _year,
+            "is_remix": _is_remix,
+            "artist": _artist,
+            "lyrics": lyrics_text
+        }
+
     return result
 
-def update_song(_id, _year, _artist, _lyrics):
 
+def update_song(_id, _year, _artist, _lyrics):
     """
     update_song() method - to update the details of a song
 
@@ -69,6 +94,7 @@ def update_song(_id, _year, _artist, _lyrics):
     song.put()
     return song
 
+
 def get_songs_with_title(_title):
     query = Song.query(Song.title == _title).get()
     songs_list = list()
@@ -76,8 +102,9 @@ def get_songs_with_title(_title):
         for song in query:
             #add a dictionary representation of the song to list
             songs_list.append(song.to_dict)
-    #empty if not populated by the
+        #empty if not populated by the
     return songs_list
+
 
 def get_songs_by_artist(_artist):
     query = Song.query(Song.artist == _artist).get()
@@ -86,11 +113,11 @@ def get_songs_by_artist(_artist):
         for song in query:
             #add a dictionary representation of the song to list
             songs_list.append(song.to_dict)
-    #empty if not populated by the
+        #empty if not populated by the
     return songs_list
 
-def get_song(_id):
 
+def get_song(_id):
     """
     get_song() method - to retrieve a song using its id
 
@@ -102,6 +129,7 @@ def get_song(_id):
         return song.to_dict()
     else:
         return {}
+
 
 def get_lyrics_by_artist(_artist):
     songs_query = Song.query(Song.artist == _artist)
@@ -121,10 +149,12 @@ def get_lyrics_with_title(_title):
     song = Song.query(Song.title == _title)
     if song is not None:
         lyrics = Lyrics.get_by_id(song.lyric_id)
-        song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year, "lyrics": lyrics}
+        song_details = {"title": song.title, "remix": song.remix, "artist": song.artist, "year": song.year,
+                        "lyrics": lyrics}
         return song_details
     else:
         return {}
+
 
 def get_lyrics_for_song(_id):
     song = Song.get_by_id(_id)
@@ -134,13 +164,16 @@ def get_lyrics_for_song(_id):
     else:
         return {}
 
+
 def get_all_songs():
     songs = Song.query().fetch()
     songs_list = list()
     for song in songs:
-        songs_list.append({'title': song.title, 'artist': song.artist, 'year': song.year, 'id': song.key.id(), 'remix': song.is_remix})
+        songs_list.append({'title': song.title, 'artist': song.artist, 'year': song.year, 'id': song.key.id(),
+                           'remix': song.is_remix})
 
     return songs_list
+
 #returns empty dictionary if no match is found
 def get_lyrics_with_id(_id):
     lyrics = Lyrics.get_by_id(_id)

@@ -17,14 +17,15 @@
                 title: $('#title').val(),
                 artist: $('#artist').val(),
                 year: $('#year').val(),
-                remix: is_remix
+                remix: is_remix,
+                lyrics: $('#lyrics').val()
             }
 
             var post_data = JSON.stringify(form_data);
 
             $.ajax({
                 cache: false,
-                url: "http://" + window.location.host+"/v1/song",
+                url: "http://" + window.location.host+"/v1/song/",
                 data: post_data,
                 dataType: 'html',
                 type: 'POST',
@@ -41,7 +42,7 @@
 
         //set what happens when the Add New button is clicked
         $('#addNew').click(function () {
-            $.get("http://localhost");
+            $.get("http://"+ window.location.host);
         });
 
         $('#clearForm').click(function () {
