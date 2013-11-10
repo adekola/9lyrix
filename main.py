@@ -142,6 +142,15 @@ class getAllSongs(base_handler.BaseHandler):
         response = {"response": songs_result}
         self.render_response(response, 200)
 
+class getLyricsDetails(base_handler.BaseHandler):
+    def get(self):
+        song_id = self.request.get('song_id')
+        song_id_int = int(song_id)
+        response = crud.get_lyrics_details(song_id_int)
+        self.render_response(response, 200)
+
+    def post(self):
+        self.render_response({}, 405)
 def render(handler, template_file="index.html", data={}):
     """
 
@@ -178,5 +187,6 @@ app = webapp2.WSGIApplication([
                                   ('/v1/lyrics/byArtist', getLyricsByArtist), #mobile client
                                   ('/v1/lyrics/byTitle', getLyricsByTitle), #mobile client
                                   ('/v1/songs/title', getSongsByTitle),
-                                  ('/v1/songs/artist', getSongsByArtist)
+                                  ('/v1/songs/artist', getSongsByArtist),
+                                  ('/v1/lyrics/lyricsDetails', getLyricsDetails)
                               ], debug=True)

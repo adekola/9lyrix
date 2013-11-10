@@ -42,7 +42,8 @@ def add_song(_year, _artist, _title, _is_remix, lyrics):
     song.year = _year
     song.is_remix = _is_remix
     song.title = _title.lower()
-    song.lyrics = lyrics
+    song.lyrics_details = lyrics
+    song.lyrics_brief = lyrics[:50] # First 50 characters
     key = song.put()
     song_id = key.id()
     result = \
@@ -52,11 +53,20 @@ def add_song(_year, _artist, _title, _is_remix, lyrics):
             "year": _year,
             "is_remix": _is_remix,
             "artist": _artist,
-            "lyrics": lyrics
+            "lyrics_brief": lyrics[:20]
         }
 
     return result
 
+def get_lyrics_details(song_id):
+    song = Song.get_by_id(song_id)
+    if song is not None:
+        song_details = {"title": song.title, "remix": song.is_remix, "artist": song.artist, "year": song.year,
+                       "lyrics_details": song.lyrics_details}
+        return song_details
+
+    else:
+        return {}
 
 def update_song(_id, _year, _artist, _lyrics):
     """
@@ -119,7 +129,9 @@ def get_lyrics_by_artist(_artist):
     songs_result = list()
     if len(songs_query) > 0:
         for s in songs_query:
-            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.is_remix, "lyrics": s.lyrics}
+            song = {"artist": s.artist, "title": s.title, "year": s.year, "remix": s.is_remix,
+                    "lyrics_brief": s.lyrics_brief,
+                    "song_id": s.key.id()}
             songs_result.append(song)
             return songs_result
 
@@ -129,14 +141,19 @@ def get_lyrics_by_artist(_artist):
 #review this to allow for multiple matches
 def get_lyrics_with_title(_title):
     songs = Song.query(Song.title == _title).fetch()
-    if len(songs) > 0 :
-        song_match = songs[0]
-        song_details = {"title": song_match.title,
-                        "remix": song_match.is_remix,
-                        "artist": song_match.artist,
-                        "year": song_match.year,
-                        "lyrics": song_match.lyrics
+    song_result = list()
+    if len(songs) > 0:
+        for s in songs:
+            song_details = {"title": s.title,
+                        "remix": s.is_remix,
+                        "artist": s.artist,
+                        "year": s.year,
+                        "lyrics_brief": s.lyrics_brief,
+                        "song_id": s.key.id()
         }
+            song_result.append(song_details)
+
+
 
         return song_details
     else:
