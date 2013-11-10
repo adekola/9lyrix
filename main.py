@@ -25,6 +25,7 @@ from logic import crud
 from util.sessions import Session
 from google.appengine.api import users
 from handlers import base_handler
+import logging
 
 # You should seriously find a means of Extracting a method to prepare the response to each request based on the
 # peculiarities of that request..i.e. refactor the call to set_status(), getResponseMessage() and self.response.write()
@@ -33,7 +34,7 @@ session = Session()
 
 class IndexHandler(base_handler.BaseHandler):
     def get(self):
-        #return the web page for landing page
+        # return the web page for landing page
         render(self, "index.html")
 
 class AdminHandler(base_handler.BaseHandler):
@@ -46,19 +47,31 @@ class AdminHandler(base_handler.BaseHandler):
                 login_url = users.create_login_url('/admin')
                 data = {"login_url": login_url}
                 render(self, "admin.html", data)
+                
+class SongsHandler(base_handler.BaseHandler):
+    def get(self):
+        data = self.request.GET
+        if data.keys():
+            result = {"data": crud.getSongs(data)}
+        else:
+            result = {"error": "no parameter provided"}
+        self.render_response(result, 200)
 
-class addLyrics(base_handler.BaseHandler):
+class LyricsHandler(base_handler.BaseHandler):
     def post(self):
         request = self.request.body
         data = json.loads(request)
         lyrics_text = data["lyrics"]
         song_id = data["song_id"]
-        result = crud.add_lyrics(lyrics_text,song_id)
+        result = crud.add_lyrics(lyrics_text, song_id)
         self.render_response(result, 201)
-        #shld yu really be returning this? well, lets see how we can manipulate it on the client
+        # shld yu really be returning this? well, lets see how we can manipulate it on the client
 
     def get(self):
-        self.render_response({}, 405)
+        song_id = self.request.get('song_id')
+        song_id_int = int(song_id)
+        response = crud.get_lyrics_details(song_id_int)
+        self.render_response(response, 200)
 
 class getLyricsByTitle(base_handler.BaseHandler):
     def get(self):
@@ -125,7 +138,7 @@ class getSongsByTitle(base_handler.BaseHandler):
         title = data["title"]
         songs_result = crud.get_songs_with_title(title)
         response = {"response": songs_result}
-        self.render_response(response,200)
+        self.render_response(response, 200)
 
 class getSongsByArtist(base_handler.BaseHandler):
     def get(self):
@@ -134,13 +147,7 @@ class getSongsByArtist(base_handler.BaseHandler):
         artist = data["artist"]
 
     def post(self):
-        self.render_response({},405)
-
-class getAllSongs(base_handler.BaseHandler):
-    def get(self):
-        songs_result = crud.get_all_songs()
-        response = {"response": songs_result}
-        self.render_response(response, 200)
+        self.render_response({}, 405)
 
 class getLyricsDetails(base_handler.BaseHandler):
     def get(self):
@@ -170,22 +177,21 @@ def render(handler, template_file="index.html", data={}):
     newval['path'] = handler.request.path
     handler.session = session
 
-    #love this part
+    # love this part
     outStr = template.render(temp, data)
     handler.response.out.write(unicode(outStr))
     return True
 
 
-#how do you authorize the apps that will be calling yur API
+# how do you authorize the apps that will be calling yur API
 app = webapp2.WSGIApplication([
                                   ('/', IndexHandler),
                                   ('/admin/', AdminHandler),
                                   ('/v1/song/', addSong),
-                                  ('/v1/songs/', getAllSongs),
-                                  ('/v1/songs/', getSongsByGenre),
-                                  ('/v1/lyrics/', addLyrics),
-                                  ('/v1/lyrics/byArtist', getLyricsByArtist), #mobile client
-                                  ('/v1/lyrics/byTitle', getLyricsByTitle), #mobile client
+                                  ('/v1/songs/', SongsHandler),
+                                  ('/v1/lyrics/', LyricsHandler),
+                                  ('/v1/lyrics/byArtist', getLyricsByArtist),  # mobile client
+                                  ('/v1/lyrics/byTitle', getLyricsByTitle),  # mobile client
                                   ('/v1/songs/title', getSongsByTitle),
                                   ('/v1/songs/artist', getSongsByArtist),
                                   ('/v1/lyrics/lyricsDetails', getLyricsDetails)
