@@ -9,9 +9,9 @@ from google.appengine.api import users
 def getSongs(args):
     query= Song.query()
     if 'title' in args.keys() or 'artist' in args.keys():
-        if 'title' in args.keys():
+        if 'title' in args.keys() and args["title"] != "":
             query = query.filter(Song.title == args['title'].lower())
-        if 'artist' in args.keys():
+        if 'artist' in args.keys() and args["artist"] != "":
             query = query.filter(Song.artist == args['artist'].lower())
     else:
         return []
