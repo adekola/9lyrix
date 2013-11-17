@@ -160,7 +160,8 @@ class getLyricsDetails(base_handler.BaseHandler):
         self.render_response({}, 405)
 
 class TitleSuggestionsHandler(base_handler.BaseHandler):
-    def get(self, title_part):
+    def get(self):
+        title_part = self.request.get('title_part')
         self.render_response(crud.get_title_suggestions(title_part),200)
 
     def post(self):
@@ -168,7 +169,8 @@ class TitleSuggestionsHandler(base_handler.BaseHandler):
 
 
 class ArtistSuggestionsHandler(base_handler.BaseHandler):
-    def get(self, artist_part):
+    def get(self):
+        artist_part  = self.request.get('artist_part')
         self.render_response(crud.get_artist_suggestions(artist_part),200)
 
     def post(self):
@@ -210,6 +212,6 @@ app = webapp2.WSGIApplication([
                                   ('/v1/songs/title', getSongsByTitle),
                                   ('/v1/songs/artist', getSongsByArtist),
                                   ('/v1/lyrics/lyricsDetails', getLyricsDetails),
-                                  ('/v1/suggestions/title/<title_part>', TitleSuggestionsHandler),
-                                  ('/v1/suggestions/artist/<artist_part>', ArtistSuggestionsHandler)
+                                  ('/v1/suggestions/title', TitleSuggestionsHandler),
+                                  ('/v1/suggestions/artist', ArtistSuggestionsHandler)
                               ], debug=True)
