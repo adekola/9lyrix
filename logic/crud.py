@@ -3,7 +3,7 @@ __author__ = 'adekola'
 This module does the db access functions for the 9lyrix platform...here are a bunch of functions for various db access tasks
 """
 
-from models.models import Song
+from models.models import Song, TitleSuggestion, ArtistSuggestion
 from google.appengine.api import users
 
 def getSongs(args):
@@ -53,6 +53,10 @@ def add_song(_year, _artist, _title, _is_remix, lyrics):
     song.lyrics_brief = lyrics[:50]  # First 50 characters
     key = song.put()
     song_id = key.id()
+    #add the title and artist suggestions
+    add_title_suggestion(_title.lower())
+    add_artist_suggestion(_artist.lower())
+
     result = \
         {
             "title": _title,
@@ -115,7 +119,6 @@ def get_lyrics_for_song(_id):
     else:
         return {}
 
-
 def get_all_songs():
     songs = Song.query().fetch()
     songs_list = list()
@@ -125,3 +128,28 @@ def get_all_songs():
 
     return songs_list
 
+def get_title_suggestions(title_part):
+    query = TitleSuggestion.query().fetch()
+    predictions = dict()
+    for t in query:
+        if t.title.startswith(title_part):
+            predictions['title'] = t.title
+
+    return predictions
+
+def get_artist_suggestions(artist_name_part):
+    query = ArtistSuggestion.query().fetch()
+    predictions = dict()
+    for a in query:
+        if a.artist_name.startswith(artist_name_part):
+            predictions['artist'] = a.artist_name
+
+    return predictions
+
+def add_title_suggestion(t_suggest):
+    tSuggest = TitleSuggestion(title=t_suggest)
+    tSuggest.put()
+
+def add_artist_suggestion(a_suggest):
+    aSuggest = ArtistSuggestion(artist_name=a_suggest)
+    aSuggest.put()

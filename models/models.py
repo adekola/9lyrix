@@ -12,3 +12,12 @@ class Song(ndb.Model):
     is_remix = ndb.BooleanProperty(default=False)
     artist = ndb.StringProperty()
     date_added = ndb.DateProperty(auto_now_add=True)
+
+
+class ArtistSuggestion(ndb.Model):
+    artist_name = ndb.StringProperty()
+
+
+class TitleSuggestion(ndb.Model):
+    title = ndb.StringProperty()
+
