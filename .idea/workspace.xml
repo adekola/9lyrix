@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65efe0b3-73ae-450a-9573-b5c30709ed17" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/crud.py" afterPath="$PROJECT_DIR$/logic/crud.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/models.py" afterPath="$PROJECT_DIR$/models/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lyrify.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/model.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1381496980339" ignored="false" />
     <file path="/crud.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1384663684032" ignored="false" />
-    <file path="/main.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1384663729551" ignored="false" />
+    <file path="/main.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1384664257642" ignored="false" />
     <file path="$PROJECT_DIR$/../devfest/main.py" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1380795396583" ignored="false" />
     <file path="/index.html" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1384029581874" ignored="false" />
     <file path="/app.yaml" changelist="65efe0b3-73ae-450a-9573-b5c30709ed17" time="1383858385234" ignored="false" />
@@ -75,7 +73,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="59" selection-start="7116" selection-end="7139" vertical-scroll-proportion="0.74814814">
+            <state line="172" column="53" selection-start="5520" selection-end="5520" vertical-scroll-proportion="0.78518516">
               <folding />
             </state>
           </provider>
@@ -685,7 +683,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="59" selection-start="7116" selection-end="7139" vertical-scroll-proportion="0.74814814">
+        <state line="172" column="53" selection-start="5520" selection-end="5520" vertical-scroll-proportion="0.78518516">
           <folding />
         </state>
       </provider>
